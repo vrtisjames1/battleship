@@ -1,13 +1,14 @@
 <div style="text-align:center" class="body">
   <!-- header -->
-  <app-header (createState)="toggleCreate()"></app-header>
+  <app-header (createState)="toggleCreate()" (selectState)="toggleSelect()"></app-header>
   <!-- create game source: https://www.youtube.com/watch?v=hxMW4b3fLyk -->
   <app-create  (newGameEvent)="createGame($event)" *ngIf="showCreate" ></app-create>
-  <app-select [games]="games"></app-select>
-  <div *ngFor="let game of games">
+  <!-- select game -->
+  <app-select [games]="games"  *ngIf="showSelect" (deleteEvent)="deleteGame($event)"></app-select>
+  <!-- <div *ngFor="let game of games">
     <p>Game Name:{{game.game_name}} Username1:{{game.username1}} Username2:{{game.username2}}</p>
 
-    <!-- <form #gamesForm="ngForm" (ngSubmit)="submitEdit(gamesForm.value)">
+    <form #gamesForm="ngForm" (ngSubmit)="submitEdit(gamesForm.value)">
       <label>Game Name</label>
       <input type="text" name="game_name" ngModel/>
       <label>Username1</label>
@@ -15,10 +16,10 @@
       <label>Username2</label>
       <input type="text" name="username2" ngModel/>
       <input type="submit" value="submit"/>
-    </form> -->
+    </form>
     <button (click)="editClicked(game.id)">Edit</button>
     <button (click)="deleteGame(game.id)">Delete</button>
     <hr/>
   </div>
-  <button (click)="loadGames()">Get API</button>
+  <button (click)="loadGames()">Get API</button> -->
 </div>

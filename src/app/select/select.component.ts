@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-select',
@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class SelectComponent {
   @Input() games: any[]=[];
+  @Output() deleteEvent: EventEmitter<any> = new EventEmitter();
+
+  delete(data: any){
+    this.deleteEvent.emit(data)
+  }
 }

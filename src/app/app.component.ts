@@ -20,12 +20,22 @@ export class AppComponent {
   currentGame: any={}={};
   // // SHOW/HIDE CREATE GAME
   showCreate: boolean=false;
-
+  // // SHOW/HIDE SELECT GAME
+  showSelect: boolean=false;
   // show/hide Create game state
+
+  // change state of create game
   toggleCreate(){
-    this.showCreate = !this.showCreate
+    this.showCreate = !this.showCreate;
+    this.showSelect = false;
   }
 
+  // change states os Select Game
+  toggleSelect(){
+    this.showSelect = !this.showSelect;
+    this.loadGames();
+    this.showCreate = false;
+  }
 
   // get reqquest
    loadGames(){
@@ -36,8 +46,8 @@ export class AppComponent {
 
   //  post request
   createGame(game: {game_name: string, username1: string, username2: string}){
-    this.toggleCreate();
-
+    this.showCreate = false;
+    this.showSelect = true;
     this.http.post("https://battleapi.herokuapp.com/api/games", game).subscribe({
       next: this.loadGames.bind(this)
    });

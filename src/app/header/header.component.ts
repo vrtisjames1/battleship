@@ -7,10 +7,18 @@ import { Component ,Input, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
   // export create game state 
-  @Output() createState = new EventEmitter<any>();
+  @Input() showCreate: boolean;
+  @Output() createState: EventEmitter<any> = new EventEmitter();
+  @Output() selectState: EventEmitter<any> = new EventEmitter();
 
   // change state of Create Game Input field 
   changeCreate(){
     this.createState.emit()
   }
+
+  changeSelect(){
+    // console.log("hello")
+    this.selectState.emit()
+  }
+
 }

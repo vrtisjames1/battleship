@@ -1,0 +1,13 @@
+.createDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    background-color: white;
+    padding: 2em 1em 2em 1em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.input{
+    margin-top: 2em;
+}

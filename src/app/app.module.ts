@@ -25,6 +25,7 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectComponent } from './select/select.component';
+import { Player1Component } from './player1/player1.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { SelectComponent } from './select/select.component';
     HeaderComponent,
     CreateComponent,
     SelectComponent,
+    Player1Component,
     // TestComponent
   ],
   imports: [
