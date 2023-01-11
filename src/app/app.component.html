@@ -5,6 +5,7 @@
   <app-create  (newGameEvent)="createGame($event)" *ngIf="showCreate" ></app-create>
   <!-- select game -->
   <app-select [games]="games"  *ngIf="showSelect" (deleteEvent)="deleteGame($event)"></app-select>
+  <app-player1></app-player1>
   <!-- <div *ngFor="let game of games">
     <p>Game Name:{{game.game_name}} Username1:{{game.username1}} Username2:{{game.username2}}</p>
 
