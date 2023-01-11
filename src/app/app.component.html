@@ -3,7 +3,7 @@
   <app-header (createState)="toggleCreate()"></app-header>
   <!-- create game source: https://www.youtube.com/watch?v=hxMW4b3fLyk -->
   <app-create  (newGameEvent)="createGame($event)" *ngIf="showCreate" ></app-create>
-
+  <app-select [games]="games"></app-select>
   <div *ngFor="let game of games">
     <p>Game Name:{{game.game_name}} Username1:{{game.username1}} Username2:{{game.username2}}</p>
 

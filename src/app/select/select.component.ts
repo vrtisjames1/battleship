@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-select',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./select.component.css']
 })
 export class SelectComponent {
-
+  @Input() games: any[]=[];
 }

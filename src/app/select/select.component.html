@@ -1,1 +1,17 @@
-<p>select works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Game Name</th>
+        <th scope="col">Player 1</th>
+        <th scope="col">Player 2</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let game of games">
+        <td>{{game.game_name}}</td>
+        <td>{{game.username1}}</td>
+        <td>{{game.username2}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
