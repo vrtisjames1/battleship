@@ -5,7 +5,7 @@
         </div>
     </div>
     <!-- start of opponent board -->
-<div class="playerBoard">
+<div class="opponentBoard">
     <div class="board"></div>
     <div class="board">1</div>
     <div class="board">2</div>
@@ -19,16 +19,16 @@
     <div class="board">10</div>
 
     <div class="board">A</div>
-    <div [ngClass]="currentGame.a1 === 0 ? 'board' : currentGame.a1 === 1 ? 'grey' : currentGame.a1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a2 === 0 ? 'board' : currentGame.a2 === 1 ? 'grey' : currentGame.a2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a3 === 0 ? 'board' : currentGame.a3 === 1 ? 'grey' : currentGame.a3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a4 === 0 ? 'board' : currentGame.a4 === 1 ? 'grey' : currentGame.a4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a5 === 0 ? 'board' : currentGame.a5 === 1 ? 'grey' : currentGame.a5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a6 === 0 ? 'board' : currentGame.a6 === 1 ? 'grey' : currentGame.a6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a7 === 0 ? 'board' : currentGame.a7 === 1 ? 'grey' : currentGame.a7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a8 === 0 ? 'board' : currentGame.a8 === 1 ? 'grey' : currentGame.a8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a9 === 0 ? 'board' : currentGame.a9 === 1 ? 'grey' : currentGame.a9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.a10 === 0 ? 'board' : currentGame.a10 === 1 ? 'grey' : currentGame.a10 === 3 ? 'white' : 'red'"></div>
+    <div [ngClass]="currentGame.stat_a1 === false ? 'board': (currentGame.a1_2 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a2 === false ? 'board': (currentGame.a2_2 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a3 === false ? 'board': (currentGame.a2_3 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a4 === false ? 'board': (currentGame.a2_4 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a5 === false ? 'board': (currentGame.a2_5 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a6 === false ? 'board': (currentGame.a2_6 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a7 === false ? 'board': (currentGame.a2_7 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a8 === false ? 'board': (currentGame.a2_8 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a9 === false ? 'board': (currentGame.a2_9 === 0 ? 'white' : 'red')"></div>
+    <div [ngClass]="currentGame.stat_a10 === false ? 'board': (currentGame.a2_10 === 0 ? 'white' : 'red')"></div>
 
     <div class="board ">B</div>
     <div [ngClass]="currentGame.b1 === 0 ? 'board' : currentGame.b1 === 1 ? 'grey' : currentGame.b1 === 3 ? 'white' : 'red'"></div>
@@ -140,7 +140,7 @@
 </div>
 
 <!-- start of current player board -->
-<div class="playerBoard">
+<div class="ownerBoard">
     <div class="board"></div>
     <div class="board">1</div>
     <div class="board">2</div>

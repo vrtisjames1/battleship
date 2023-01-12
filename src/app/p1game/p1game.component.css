@@ -10,14 +10,24 @@
     border-radius: 5px;
 }
 
-.playerBoard{
+.ownerBoard{
+    display: grid;
+    grid-gap: 0;
+    max-width: 500px;
+    justify-content: center;
+    margin: 1em auto 3em auto;
+    grid-template-columns: repeat(11, 8%);
+    grid-template-rows: repeat(11, 9%);
+}
+
+.opponentBoard{
     display: grid;
     grid-gap: 0;
     max-width: 700px;
     justify-content: center;
     margin: 1em auto 3em auto;
     grid-template-columns: repeat(11, 8%);
-    grid-template-rows: repeat(11, 8vh);
+    grid-template-rows: repeat(11, 9%);
 }
 
 .board{
