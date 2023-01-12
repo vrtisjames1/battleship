@@ -23,6 +23,7 @@ export class AppComponent {
   // // SHOW/HIDE SELECT GAME
   showSelect: boolean=false;
   // show/hide Create game state
+  userSelect: number;
 
   // change state of create game
   toggleCreate(){
@@ -35,6 +36,11 @@ export class AppComponent {
     this.showSelect = !this.showSelect;
     this.loadGames();
     this.showCreate = false;
+  }
+
+  // selectUser
+  selectedUser(user: number){
+    this.userSelect = user;
   }
 
   // get reqquest

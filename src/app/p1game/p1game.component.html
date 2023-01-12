@@ -6,139 +6,140 @@
     </div>
     <!-- start of opponent board -->
 <div class="opponentBoard">
-    <div class="board"></div>
-    <div class="board">1</div>
-    <div class="board">2</div>
-    <div class="board">3</div>
-    <div class="board">4</div>
-    <div class="board">5</div>
-    <div class="board">6</div>
-    <div class="board">7</div>
-    <div class="board">8</div>
-    <div class="board">9</div>
-    <div class="board">10</div>
+    <div class="oppboard"></div>
+    <div class="oppboard">1</div>
+    <div class="oppboard">2</div>
+    <div class="oppboard">3</div>
+    <div class="oppboard">4</div>
+    <div class="oppboard">5</div>
+    <div class="oppboard">6</div>
+    <div class="oppboard">7</div>
+    <div class="oppboard">8</div>
+    <div class="oppboard">9</div>
+    <div class="oppboard">10</div>
 
-    <div class="board">A</div>
-    <div [ngClass]="currentGame.stat_a1 === false ? 'board': (currentGame.a1_2 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a2 === false ? 'board': (currentGame.a2_2 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a3 === false ? 'board': (currentGame.a2_3 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a4 === false ? 'board': (currentGame.a2_4 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a5 === false ? 'board': (currentGame.a2_5 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a6 === false ? 'board': (currentGame.a2_6 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a7 === false ? 'board': (currentGame.a2_7 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a8 === false ? 'board': (currentGame.a2_8 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a9 === false ? 'board': (currentGame.a2_9 === 0 ? 'white' : 'red')"></div>
-    <div [ngClass]="currentGame.stat_a10 === false ? 'board': (currentGame.a2_10 === 0 ? 'white' : 'red')"></div>
+    <div class="oppboard">A</div>
+    <div [ngClass]="currentGame.stat_a1 === false ? 'oppboard': (currentGame.a1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a2 === false ? 'oppboard': (currentGame.a2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a3 === false ? 'oppboard': (currentGame.a3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a4 === false ? 'oppboard': (currentGame.a4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a5 === false ? 'oppboard': (currentGame.a5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a6 === false ? 'oppboard': (currentGame.a6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a7 === false ? 'oppboard': (currentGame.a7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a8 === false ? 'oppboard': (currentGame.a8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a9 === false ? 'oppboard': (currentGame.a9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_a10 === false ? 'oppboard': (currentGame.a10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_a10 = true) : null "></div>
 
-    <div class="board ">B</div>
-    <div [ngClass]="currentGame.b1 === 0 ? 'board' : currentGame.b1 === 1 ? 'grey' : currentGame.b1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b2 === 0 ? 'board' : currentGame.b2 === 1 ? 'grey' : currentGame.b2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b3 === 0 ? 'board' : currentGame.b3 === 1 ? 'grey' : currentGame.b3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b4 === 0 ? 'board' : currentGame.b4 === 1 ? 'grey' : currentGame.b4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b5 === 0 ? 'board' : currentGame.b5 === 1 ? 'grey' : currentGame.b5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b6 === 0 ? 'board' : currentGame.b6 === 1 ? 'grey' : currentGame.b6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b7 === 0 ? 'board' : currentGame.b7 === 1 ? 'grey' : currentGame.b7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b8 === 0 ? 'board' : currentGame.b8 === 1 ? 'grey' : currentGame.b8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b9 === 0 ? 'board' : currentGame.b9 === 1 ? 'grey' : currentGame.b9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.b10 === 0 ? 'board' : currentGame.b10 === 1 ? 'grey' : currentGame.b10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">B</div>
+    <div [ngClass]="currentGame.stat_b1 === false ? 'oppboard': (currentGame.b1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b2 === false ? 'oppboard': (currentGame.b2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b3 === false ? 'oppboard': (currentGame.b3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b4 === false ? 'oppboard': (currentGame.b4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b5 === false ? 'oppboard': (currentGame.b5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b6 === false ? 'oppboard': (currentGame.b6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b7 === false ? 'oppboard': (currentGame.b7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b8 === false ? 'oppboard': (currentGame.b8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b9 === false ? 'oppboard': (currentGame.b9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_b10 === false ? 'oppboard': (currentGame.b10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_b11 = true) : null "></div>
 
-    <div class="board">C</div>
-    <div [ngClass]="currentGame.c1 === 0 ? 'board' : currentGame.c1 === 1 ? 'grey' : currentGame.c1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c2 === 0 ? 'board' : currentGame.c2 === 1 ? 'grey' : currentGame.c2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c3 === 0 ? 'board' : currentGame.c3 === 1 ? 'grey' : currentGame.c3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c4 === 0 ? 'board' : currentGame.c4 === 1 ? 'grey' : currentGame.c4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c5 === 0 ? 'board' : currentGame.c5 === 1 ? 'grey' : currentGame.c5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c6 === 0 ? 'board' : currentGame.c6 === 1 ? 'grey' : currentGame.c6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c7 === 0 ? 'board' : currentGame.c7 === 1 ? 'grey' : currentGame.c7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c8 === 0 ? 'board' : currentGame.c8 === 1 ? 'grey' : currentGame.c8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c9 === 0 ? 'board' : currentGame.c9 === 1 ? 'grey' : currentGame.c9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.c10 === 0 ? 'board' : currentGame.c10 === 1 ? 'grey' : currentGame.c10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">C</div>
+    <div [ngClass]="currentGame.stat_c1 === false ? 'oppboard': (currentGame.c1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c2 === false ? 'oppboard': (currentGame.c2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c3 === false ? 'oppboard': (currentGame.c3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c4 === false ? 'oppboard': (currentGame.c4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c5 === false ? 'oppboard': (currentGame.c5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c6 === false ? 'oppboard': (currentGame.c6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c7 === false ? 'oppboard': (currentGame.c7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c8 === false ? 'oppboard': (currentGame.c8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c9 === false ? 'oppboard': (currentGame.c9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_c10 === false ? 'oppboard': (currentGame.c10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_c11 = true) : null "></div>
 
-    <div class="board">D</div>
-    <div [ngClass]="currentGame.d1 === 0 ? 'board' : currentGame.d1 === 1 ? 'grey' : currentGame.d1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d2 === 0 ? 'board' : currentGame.d2 === 1 ? 'grey' : currentGame.d2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d3 === 0 ? 'board' : currentGame.d3 === 1 ? 'grey' : currentGame.d3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d4 === 0 ? 'board' : currentGame.d4 === 1 ? 'grey' : currentGame.d4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d5 === 0 ? 'board' : currentGame.d5 === 1 ? 'grey' : currentGame.d5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d6 === 0 ? 'board' : currentGame.d6 === 1 ? 'grey' : currentGame.d6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d7 === 0 ? 'board' : currentGame.d7 === 1 ? 'grey' : currentGame.d7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d8 === 0 ? 'board' : currentGame.d8 === 1 ? 'grey' : currentGame.d8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d9 === 0 ? 'board' : currentGame.d9 === 1 ? 'grey' : currentGame.d9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.d10 === 0 ? 'board' : currentGame.d10 === 1 ? 'grey' : currentGame.d10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">D</div>
+    <div [ngClass]="currentGame.stat_d1 === false ? 'oppboard': (currentGame.d1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d2 === false ? 'oppboard': (currentGame.d2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d3 === false ? 'oppboard': (currentGame.d3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d4 === false ? 'oppboard': (currentGame.d4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d5 === false ? 'oppboard': (currentGame.d5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d6 === false ? 'oppboard': (currentGame.d6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d7 === false ? 'oppboard': (currentGame.d7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d8 === false ? 'oppboard': (currentGame.d8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d9 === false ? 'oppboard': (currentGame.d9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_d10 === false ? 'oppboard': (currentGame.d10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_d11 = true) : null "></div>
 
-    <div class="board">E</div>
-    <div [ngClass]="currentGame.e1 === 0 ? 'board' : currentGame.e1 === 1 ? 'grey' : currentGame.e1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e2 === 0 ? 'board' : currentGame.e2 === 1 ? 'grey' : currentGame.e2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e3 === 0 ? 'board' : currentGame.e3 === 1 ? 'grey' : currentGame.e3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e4 === 0 ? 'board' : currentGame.e4 === 1 ? 'grey' : currentGame.e4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e5 === 0 ? 'board' : currentGame.e5 === 1 ? 'grey' : currentGame.e5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e6 === 0 ? 'board' : currentGame.e6 === 1 ? 'grey' : currentGame.e6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e7 === 0 ? 'board' : currentGame.e7 === 1 ? 'grey' : currentGame.e7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e8 === 0 ? 'board' : currentGame.e8 === 1 ? 'grey' : currentGame.e8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e9 === 0 ? 'board' : currentGame.e9 === 1 ? 'grey' : currentGame.e9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.e10 === 0 ? 'board' : currentGame.e10 === 1 ? 'grey' : currentGame.e10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">E</div>
+    <div [ngClass]="currentGame.stat_e1 === false ? 'oppboard': (currentGame.e1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e2 === false ? 'oppboard': (currentGame.e2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e3 === false ? 'oppboard': (currentGame.e3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e4 === false ? 'oppboard': (currentGame.e4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e5 === false ? 'oppboard': (currentGame.e5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e6 === false ? 'oppboard': (currentGame.e6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e7 === false ? 'oppboard': (currentGame.e7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e8 === false ? 'oppboard': (currentGame.e8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e9 === false ? 'oppboard': (currentGame.e9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_e10 === false ? 'oppboard': (currentGame.e10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_e11 = true) : null "></div>
 
-    <div class="board">F</div>
-    <div [ngClass]="currentGame.f1 === 0 ? 'board' : currentGame.f1 === 1 ? 'grey' : currentGame.f1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f2 === 0 ? 'board' : currentGame.f2 === 1 ? 'grey' : currentGame.f2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f3 === 0 ? 'board' : currentGame.f3 === 1 ? 'grey' : currentGame.f3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f4 === 0 ? 'board' : currentGame.f4 === 1 ? 'grey' : currentGame.f4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f5 === 0 ? 'board' : currentGame.f5 === 1 ? 'grey' : currentGame.f5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f6 === 0 ? 'board' : currentGame.f6 === 1 ? 'grey' : currentGame.f6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f7 === 0 ? 'board' : currentGame.f7 === 1 ? 'grey' : currentGame.f7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f8 === 0 ? 'board' : currentGame.f8 === 1 ? 'grey' : currentGame.f8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f9 === 0 ? 'board' : currentGame.f9 === 1 ? 'grey' : currentGame.f9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.f10 === 0 ? 'board' : currentGame.f10 === 1 ? 'grey' : currentGame.f10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">F</div>
+    <div [ngClass]="currentGame.stat_f1 === false ? 'oppboard': (currentGame.f1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f2 === false ? 'oppboard': (currentGame.f2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f3 === false ? 'oppboard': (currentGame.f3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f4 === false ? 'oppboard': (currentGame.f4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f5 === false ? 'oppboard': (currentGame.f5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f6 === false ? 'oppboard': (currentGame.f6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f7 === false ? 'oppboard': (currentGame.f7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f8 === false ? 'oppboard': (currentGame.f8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f9 === false ? 'oppboard': (currentGame.f9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_f10 === false ? 'oppboard': (currentGame.f10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_f11 = true) : null "></div>
 
-    <div class="board">G</div>
-    <div [ngClass]="currentGame.g1 === 0 ? 'board' : currentGame.g1 === 1 ? 'grey' : currentGame.g1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g2 === 0 ? 'board' : currentGame.g2 === 1 ? 'grey' : currentGame.g2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g3 === 0 ? 'board' : currentGame.g3 === 1 ? 'grey' : currentGame.g3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g4 === 0 ? 'board' : currentGame.g4 === 1 ? 'grey' : currentGame.g4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g5 === 0 ? 'board' : currentGame.g5 === 1 ? 'grey' : currentGame.g5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g6 === 0 ? 'board' : currentGame.g6 === 1 ? 'grey' : currentGame.g6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g7 === 0 ? 'board' : currentGame.g7 === 1 ? 'grey' : currentGame.g7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g8 === 0 ? 'board' : currentGame.g8 === 1 ? 'grey' : currentGame.g8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g9 === 0 ? 'board' : currentGame.g9 === 1 ? 'grey' : currentGame.g9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.g10 === 0 ? 'board' : currentGame.g10 === 1 ? 'grey' : currentGame.g10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">G</div>
+    <div [ngClass]="currentGame.stat_g1 === false ? 'oppboard': (currentGame.g1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g2 === false ? 'oppboard': (currentGame.g2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g3 === false ? 'oppboard': (currentGame.g3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g4 === false ? 'oppboard': (currentGame.g4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g5 === false ? 'oppboard': (currentGame.g5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g6 === false ? 'oppboard': (currentGame.g6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g7 === false ? 'oppboard': (currentGame.g7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g8 === false ? 'oppboard': (currentGame.g8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g9 === false ? 'oppboard': (currentGame.g9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_g10 === false ? 'oppboard': (currentGame.g10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_g11 = true) : null "></div>
 
-    <div class="board">H</div>
-    <div [ngClass]="currentGame.h1 === 0 ? 'board' : currentGame.h1 === 1 ? 'grey' : currentGame.h1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h2 === 0 ? 'board' : currentGame.h2 === 1 ? 'grey' : currentGame.h2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h3 === 0 ? 'board' : currentGame.h3 === 1 ? 'grey' : currentGame.h3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h4 === 0 ? 'board' : currentGame.h4 === 1 ? 'grey' : currentGame.h4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h5 === 0 ? 'board' : currentGame.h5 === 1 ? 'grey' : currentGame.h5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h6 === 0 ? 'board' : currentGame.h6 === 1 ? 'grey' : currentGame.h6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h7 === 0 ? 'board' : currentGame.h7 === 1 ? 'grey' : currentGame.h7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h8 === 0 ? 'board' : currentGame.h8 === 1 ? 'grey' : currentGame.h8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h9 === 0 ? 'board' : currentGame.h9 === 1 ? 'grey' : currentGame.h9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.h10 === 0 ? 'board' : currentGame.h10 === 1 ? 'grey' : currentGame.h10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">H</div>
+    <div [ngClass]="currentGame.stat_h1 === false ? 'oppboard': (currentGame.h1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h2 === false ? 'oppboard': (currentGame.h2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h3 === false ? 'oppboard': (currentGame.h3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h4 === false ? 'oppboard': (currentGame.h4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h5 === false ? 'oppboard': (currentGame.h5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h6 === false ? 'oppboard': (currentGame.h6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h7 === false ? 'oppboard': (currentGame.h7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h8 === false ? 'oppboard': (currentGame.h8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h9 === false ? 'oppboard': (currentGame.h9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_h10 === false ? 'oppboard': (currentGame.h10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_h11 = true) : null "></div>
 
-    <div class="board">I</div>
-    <div [ngClass]="currentGame.i1 === 0 ? 'board' : currentGame.i1 === 1 ? 'grey' : currentGame.i1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i2 === 0 ? 'board' : currentGame.i2 === 1 ? 'grey' : currentGame.i2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i3 === 0 ? 'board' : currentGame.i3 === 1 ? 'grey' : currentGame.i3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i4 === 0 ? 'board' : currentGame.i4 === 1 ? 'grey' : currentGame.i4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i5 === 0 ? 'board' : currentGame.i5 === 1 ? 'grey' : currentGame.i5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i6 === 0 ? 'board' : currentGame.i6 === 1 ? 'grey' : currentGame.i6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i7 === 0 ? 'board' : currentGame.i7 === 1 ? 'grey' : currentGame.i7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i8 === 0 ? 'board' : currentGame.i8 === 1 ? 'grey' : currentGame.i8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i9 === 0 ? 'board' : currentGame.i9 === 1 ? 'grey' : currentGame.i9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.i10 === 0 ? 'board' : currentGame.i10 === 1 ? 'grey' : currentGame.i10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">I</div>
+    <div [ngClass]="currentGame.stat_i1 === false ? 'oppboard': (currentGame.i1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i2 === false ? 'oppboard': (currentGame.i2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i3 === false ? 'oppboard': (currentGame.i3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i4 === false ? 'oppboard': (currentGame.i4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i5 === false ? 'oppboard': (currentGame.i5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i6 === false ? 'oppboard': (currentGame.i6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i7 === false ? 'oppboard': (currentGame.i7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i8 === false ? 'oppboard': (currentGame.i8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i9 === false ? 'oppboard': (currentGame.i9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_i10 === false ? 'oppboard': (currentGame.i10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_i11 = true) : null "></div>
 
-    <div class="board">J</div>
-    <div [ngClass]="currentGame.j1 === 0 ? 'board' : currentGame.j1 === 1 ? 'grey' : currentGame.j1 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j2 === 0 ? 'board' : currentGame.j2 === 1 ? 'grey' : currentGame.j2 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j3 === 0 ? 'board' : currentGame.j3 === 1 ? 'grey' : currentGame.j3 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j4 === 0 ? 'board' : currentGame.j4 === 1 ? 'grey' : currentGame.j4 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j5 === 0 ? 'board' : currentGame.j5 === 1 ? 'grey' : currentGame.j5 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j6 === 0 ? 'board' : currentGame.j6 === 1 ? 'grey' : currentGame.j6 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j7 === 0 ? 'board' : currentGame.j7 === 1 ? 'grey' : currentGame.j7 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j8 === 0 ? 'board' : currentGame.j8 === 1 ? 'grey' : currentGame.j8 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j9 === 0 ? 'board' : currentGame.j9 === 1 ? 'grey' : currentGame.j9 === 3 ? 'white' : 'red'"></div>
-    <div [ngClass]="currentGame.j10 === 0 ? 'board' : currentGame.j10 === 1 ? 'grey' : currentGame.j10 === 3 ? 'white' : 'red'"></div>
+    <div class="oppboard">J</div>
+    <div [ngClass]="currentGame.stat_j1 === false ? 'oppboard': (currentGame.j1_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j1 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j2 === false ? 'oppboard': (currentGame.j2_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j2 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j3 === false ? 'oppboard': (currentGame.j3_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j3 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j4 === false ? 'oppboard': (currentGame.j4_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j4 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j5 === false ? 'oppboard': (currentGame.j5_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j5 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j6 === false ? 'oppboard': (currentGame.j6_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j6 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j7 === false ? 'oppboard': (currentGame.j7_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j7 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j8 === false ? 'oppboard': (currentGame.j8_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j8 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j9 === false ? 'oppboard': (currentGame.j9_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j9 = true) : null "></div>
+    <div [ngClass]="currentGame.stat_j10 === false ? 'oppboard': (currentGame.j10_2 === 0 ? 'white' : 'red')" (click)="currentGame.user1_turn === true ? submit(currentGame.stat_j11 = true) : null "></div>
 </div>
-
+<!-- ================================= -->
+<!-- ================================= -->
 <!-- start of current player board -->
 <div class="ownerBoard">
     <div class="board"></div>

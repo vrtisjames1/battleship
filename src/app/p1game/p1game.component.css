@@ -38,6 +38,15 @@
     color: white;
     background-color:  #002147
 }
+.oppboard{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color:  #5D76A9
+}
+
 
 .red{
     background-color: red;

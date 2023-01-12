@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectComponent } from './select/select.component';
 import { Player1Component } from './player1/player1.component';
 import { P1gameComponent } from './p1game/p1game.component';
+import { PlayerselectComponent } from './playerselect/playerselect.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { P1gameComponent } from './p1game/p1game.component';
     SelectComponent,
     Player1Component,
     P1gameComponent,
+    PlayerselectComponent,
     // TestComponent
   ],
   imports: [
