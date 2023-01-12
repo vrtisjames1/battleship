@@ -1,4 +1,4 @@
-.placeBoats{
+.messageContainer{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -8,22 +8,6 @@
     padding: 1em;
     border: 1px solid black;
     border-radius: 5px;
-    
-}
-
-.ship5, .ship4{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.boardDiv{
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    margin: 1em;
 }
 
 .playerBoard{
@@ -46,6 +30,24 @@
 }
 
 .red{
+    background-color: red;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.white{
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.grey{
     background-color: #808080;
     border: 1px solid black;
     display: flex;
@@ -53,4 +55,3 @@
     align-items: center;
     color: white;
 }
-   

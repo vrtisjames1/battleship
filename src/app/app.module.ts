@@ -26,6 +26,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectComponent } from './select/select.component';
 import { Player1Component } from './player1/player1.component';
+import { P1gameComponent } from './p1game/p1game.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { Player1Component } from './player1/player1.component';
     CreateComponent,
     SelectComponent,
     Player1Component,
+    P1gameComponent,
     // TestComponent
   ],
   imports: [

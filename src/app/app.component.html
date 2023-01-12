@@ -6,21 +6,7 @@
   <!-- select game -->
   <app-select [games]="games" *ngIf="showSelect" (deleteEvent)="deleteGame($event)" (selectedGame)="selectGame($event)"></app-select>
   <app-player1 [currentGame]="currentGame" (newCurrentGame)="setCurrentGame($event)"></app-player1>
-  <!-- <div *ngFor="let game of games">
-    <p>Game Name:{{game.game_name}} Username1:{{game.username1}} Username2:{{game.username2}}</p>
-
-    <form #gamesForm="ngForm" (ngSubmit)="submitEdit(gamesForm.value)">
-      <label>Game Name</label>
-      <input type="text" name="game_name" ngModel/>
-      <label>Username1</label>
-      <input type="text" name="username1" ngModel/>
-      <label>Username2</label>
-      <input type="text" name="username2" ngModel/>
-      <input type="submit" value="submit"/>
-    </form>
-    <button (click)="editClicked(game.id)">Edit</button>
-    <button (click)="deleteGame(game.id)">Delete</button>
-    <hr/>
-  </div>
-  <button (click)="loadGames()">Get API</button> -->
+  <!-- p1 playing game -->
+  <app-p1game [currentGame]="currentGame"></app-p1game>
+  <!-- p2 playing game -->
 </div>
