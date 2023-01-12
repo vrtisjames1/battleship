@@ -4,10 +4,11 @@
   <!-- create game source: https://www.youtube.com/watch?v=hxMW4b3fLyk -->
   <app-create  (newGameEvent)="createGame($event)" *ngIf="showCreate" ></app-create>
   <!-- select game -->
-  <app-select [games]="games" *ngIf="showSelect" (deleteEvent)="deleteGame($event)" (selectedGame)="selectGame($event)"></app-select>
-  <app-playerselect [currentGame]="currentGame" (selectedUser)="selectedUser($event)"></app-playerselect>
+  <app-select [games]="games" (deleteEvent)="deleteGame($event)" (selectedGame)="selectGame($event)" *ngIf="showSelect"></app-select>
+  <app-playerselect [currentGame]="currentGame" (selectedUser)="selectedUser($event)" *ngIf="showPlayers"></app-playerselect>
   <app-player1 [currentGame]="currentGame" [userSelect]="userSelect" (newCurrentGame)="setCurrentGame($event)"></app-player1>
   <!-- p1 playing game -->
   <app-p1game [currentGame]="currentGame" (updateGame)="setCurrentGame($event)"></app-p1game>
   <!-- p2 playing game -->
+  <app-p2game [currentGame]="currentGame" (updateGame)="setCurrentGame($event)"></app-p2game>
 </div>

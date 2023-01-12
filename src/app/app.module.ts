@@ -28,6 +28,7 @@ import { SelectComponent } from './select/select.component';
 import { Player1Component } from './player1/player1.component';
 import { P1gameComponent } from './p1game/p1game.component';
 import { PlayerselectComponent } from './playerselect/playerselect.component';
+import { P2gameComponent } from './p2game/p2game.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { PlayerselectComponent } from './playerselect/playerselect.component';
     Player1Component,
     P1gameComponent,
     PlayerselectComponent,
+    P2gameComponent,
     // TestComponent
   ],
   imports: [

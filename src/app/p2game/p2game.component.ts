@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-p1game',
-  templateUrl: './p1game.component.html',
-  styleUrls: ['./p1game.component.css']
+  selector: 'app-p2game',
+  templateUrl: './p2game.component.html',
+  styleUrls: ['./p2game.component.css']
 })
-export class P1gameComponent {
+export class P2gameComponent {
   // input current game data
   @Input() currentGame: any={};
   // output updated game
@@ -14,8 +14,8 @@ export class P1gameComponent {
   message: string='Start Game! Select space on "Opponent Board" to launch your first missle!'
 
   submit(data: any){
-    this.currentGame.user1_turn = false;
-    this.currentGame.user2_turn = true;
+    this.currentGame.user1_turn = true;
+    this.currentGame.user2_turn = false;
   }
 
   submit2(data: any){

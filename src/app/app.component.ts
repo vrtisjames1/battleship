@@ -24,6 +24,8 @@ export class AppComponent {
   showSelect: boolean=false;
   // show/hide Create game state
   userSelect: number;
+  // show/hide players
+  showPlayers: boolean=false;
 
   // change state of create game
   toggleCreate(){
@@ -41,6 +43,7 @@ export class AppComponent {
   // selectUser
   selectedUser(user: number){
     this.userSelect = user;
+    this.showPlayers = false;
   }
 
   // get reqquest
@@ -74,7 +77,10 @@ export class AppComponent {
   //   console.log(this.currentGame)
   // }
   selectGame(game: any){
-    this.currentGame = game
+    this.currentGame = game;
+    this.showPlayers = true;
+    this.showSelect = false;
+
   }
 
   // submitEdit(game: {game_name: string, username1: string, username2: string}){

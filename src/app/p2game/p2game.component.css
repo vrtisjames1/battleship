@@ -1,0 +1,76 @@
+.messageContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px 5px;
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.ownerBoard{
+    display: grid;
+    grid-gap: 0;
+    max-width: 500px;
+    justify-content: center;
+    margin: 1em auto 3em auto;
+    grid-template-columns: repeat(11, 8%);
+    grid-template-rows: repeat(11, 9%);
+}
+
+.opponentBoard{
+    display: grid;
+    grid-gap: 0;
+    max-width: 700px;
+    justify-content: center;
+    margin: 1em auto 3em auto;
+    grid-template-columns: repeat(11, 8%);
+    grid-template-rows: repeat(11, 9%);
+}
+
+.board{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color:  #002147
+}
+.oppboard{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color:  #5D76A9
+}
+
+
+.red{
+    background-color: red;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.white{
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.grey{
+    background-color: #808080;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
