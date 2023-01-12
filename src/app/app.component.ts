@@ -41,6 +41,7 @@ export class AppComponent {
    loadGames(){
     this.http.get("https://battleapi.herokuapp.com/api/games").subscribe((games: any)=>{
       this.games = games;
+      console.log(this.games);
     })
    }
 
@@ -62,17 +63,23 @@ export class AppComponent {
   }
 
   // put Request
-  editClicked(id: number){
-    this.currentGame = this.games.find((a) => {return a.id === id})
-    console.log(this.currentGame)
+  // editClicked(id: number){
+  //   this.currentGame = this.games.find((a) => {return a.id === id})
+  //   console.log(this.currentGame)
+  // }
+  selectGame(game: any){
+    this.currentGame = game
   }
 
-  submitEdit(game: {game_name: string, username1: string, username2: string}){
-    this.currentGame = {...this.currentGame,
-      game_name: game.game_name,
-      username1: game.username1,
-      username2: game.username2,
-    }
+  // submitEdit(game: {game_name: string, username1: string, username2: string}){
+  //   this.currentGame = {...this.currentGame,
+  //     game_name: game.game_name,
+  //     username1: game.username1,
+  //     username2: game.username2,
+  //   }
+  setCurrentGame(newCurrentGame: any){
+    this.currentGame = newCurrentGame
+    console.log(this.currentGame)
 
       this.http.put("https://battleapi.herokuapp.com/api/games/" + this.currentGame.id, this.currentGame).subscribe({
         next: this.loadGames.bind(this)

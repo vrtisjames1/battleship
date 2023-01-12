@@ -1,44 +1,13 @@
 <div class="boardDiv">
     <div class="placeBoats">
-        <div class="ship5">
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">5 Piece Ship</label>
-            </mdb-form-control>
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">5 Piece Ship</label>
-            </mdb-form-control>
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">5 Piece Ship</label>
-            </mdb-form-control>
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">5 Piece Ship</label>
-            </mdb-form-control>
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">5 Piece Ship</label>
-            </mdb-form-control>
+        <div>
+            <p>{{message}}</p>
         </div>
-        <div class="ship4">
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">4 Piece Ship: Ship space (i.e. A1)</label>
-            </mdb-form-control>
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">4 Piece Ship</label>
-            </mdb-form-control>
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">4 Piece Ship</label>
-            </mdb-form-control>
-            <mdb-form-control>
-                <input mdbInput  class="form-control" id="form1" type="text"/>
-                <label mdbLabel class="form-label" for="form1">4 Piece Ship</label>
-            </mdb-form-control>
+        <div>
+            <img src="../../assets/image/placement.jpg"/>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success" (click)="submit()">Submit</button>
         </div>
     </div>
 <div class="playerBoard">
@@ -55,123 +24,123 @@
     <div class="board">10</div>
 
     <div class="board">A</div>
-    <div class="board a1">a1</div>
-    <div class="board a2">a2</div>
-    <div class="board a3">a3</div>
-    <div class="board a4">a4</div>
-    <div class="board a5">a5</div>
-    <div class="board a6">a6</div>
-    <div class="board a7">a7</div>
-    <div class="board a8">a8</div>
-    <div class="board a9">a9</div>
-    <div class="board a10">a10</div>
+    <div [ngClass]="bool_array[0] ? 'red':'board'" (click)="bool_array[0]=!bool_array[0]" role="button"></div>
+    <div [ngClass]="bool_array[1] ? 'red':'board'" (click)="bool_array[1]=!bool_array[1]" role="button"></div>
+    <div [ngClass]="bool_array[2] ? 'red':'board'" (click)="bool_array[2]=!bool_array[2]" role="button"></div>
+    <div [ngClass]="bool_array[3] ? 'red':'board'" (click)="bool_array[3]=!bool_array[3]" role="button"></div>
+    <div [ngClass]="bool_array[4] ? 'red':'board'" (click)="bool_array[4]=!bool_array[4]" role="button"></div>
+    <div [ngClass]="bool_array[5] ? 'red':'board'" (click)="bool_array[5]=!bool_array[5]" role="button"></div>
+    <div [ngClass]="bool_array[6] ? 'red':'board'" (click)="bool_array[6]=!bool_array[6]" role="button"></div>
+    <div [ngClass]="bool_array[7] ? 'red':'board'" (click)="bool_array[7]=!bool_array[7]" role="button"></div>
+    <div [ngClass]="bool_array[8] ? 'red':'board'" (click)="bool_array[8]=!bool_array[8]" role="button"></div>
+    <div [ngClass]="bool_array[9] ? 'red':'board'" (click)="bool_array[9]=!bool_array[9]" role="button"></div>
 
     <div class="board ">B</div>
-    <div class="board b1">b1</div>
-    <div class="board b2">b2</div>
-    <div class="board b3">b3</div>
-    <div class="board b4">b4</div>
-    <div class="board b5">b5</div>
-    <div class="board b6">b6</div>
-    <div class="board b7">b7</div>
-    <div class="board b8">b8</div>
-    <div class="board b9">b9</div>
-    <div class="board b10">b10</div>
+    <div [ngClass]="bool_array[10] ? 'red':'board'" (click)="bool_array[10]=!bool_array[10]" role="button"></div>
+    <div [ngClass]="bool_array[11] ? 'red':'board'" (click)="bool_array[11]=!bool_array[11]" role="button"></div>
+    <div [ngClass]="bool_array[12] ? 'red':'board'" (click)="bool_array[12]=!bool_array[12]" role="button"></div>
+    <div [ngClass]="bool_array[13] ? 'red':'board'" (click)="bool_array[13]=!bool_array[13]" role="button"></div>
+    <div [ngClass]="bool_array[14] ? 'red':'board'" (click)="bool_array[14]=!bool_array[14]" role="button"></div>
+    <div [ngClass]="bool_array[15] ? 'red':'board'" (click)="bool_array[15]=!bool_array[15]" role="button"></div>
+    <div [ngClass]="bool_array[16] ? 'red':'board'" (click)="bool_array[16]=!bool_array[16]" role="button"></div>
+    <div [ngClass]="bool_array[17] ? 'red':'board'" (click)="bool_array[17]=!bool_array[17]" role="button"></div>
+    <div [ngClass]="bool_array[18] ? 'red':'board'" (click)="bool_array[18]=!bool_array[18]" role="button"></div>
+    <div [ngClass]="bool_array[19] ? 'red':'board'" (click)="bool_array[19]=!bool_array[19]" role="button"></div>
 
     <div class="board">C</div>
-    <div class="board c1">c1</div>
-    <div class="board c2">c2</div>
-    <div class="board c3">c3</div>
-    <div class="board c4">c4</div>
-    <div class="board c5">c5</div>
-    <div class="board c6">c6</div>
-    <div class="board c7">c7</div>
-    <div class="board c8">c8</div>
-    <div class="board c9">c9</div>
-    <div class="board 10">c10</div>
+    <div [ngClass]="bool_array[20] ? 'red':'board'" (click)="bool_array[20]=!bool_array[20]" role="button"></div>
+    <div [ngClass]="bool_array[21] ? 'red':'board'" (click)="bool_array[21]=!bool_array[21]" role="button"></div>
+    <div [ngClass]="bool_array[22] ? 'red':'board'" (click)="bool_array[22]=!bool_array[22]" role="button"></div>
+    <div [ngClass]="bool_array[23] ? 'red':'board'" (click)="bool_array[23]=!bool_array[23]" role="button"></div>
+    <div [ngClass]="bool_array[24] ? 'red':'board'" (click)="bool_array[24]=!bool_array[24]" role="button"></div>
+    <div [ngClass]="bool_array[25] ? 'red':'board'" (click)="bool_array[25]=!bool_array[25]" role="button"></div>
+    <div [ngClass]="bool_array[26] ? 'red':'board'" (click)="bool_array[26]=!bool_array[26]" role="button"></div>
+    <div [ngClass]="bool_array[27] ? 'red':'board'" (click)="bool_array[27]=!bool_array[27]" role="button"></div>
+    <div [ngClass]="bool_array[28] ? 'red':'board'" (click)="bool_array[28]=!bool_array[28]" role="button"></div>
+    <div [ngClass]="bool_array[29] ? 'red':'board'" (click)="bool_array[29]=!bool_array[29]" role="button"></div>
 
     <div class="board">D</div>
-    <div class="board">d1</div>
-    <div class="board">d2</div>
-    <div class="board">d3</div>
-    <div class="board">d4</div>
-    <div class="board">d5</div>
-    <div class="board">d6</div>
-    <div class="board">d7</div>
-    <div class="board">d8</div>
-    <div class="board">d9</div>
-    <div class="board">d10</div>
+    <div [ngClass]="bool_array[30] ? 'red':'board'" (click)="bool_array[30]=!bool_array[30]" role="button"></div>
+    <div [ngClass]="bool_array[31] ? 'red':'board'" (click)="bool_array[31]=!bool_array[31]" role="button"></div>
+    <div [ngClass]="bool_array[32] ? 'red':'board'" (click)="bool_array[32]=!bool_array[32]" role="button"></div>
+    <div [ngClass]="bool_array[33] ? 'red':'board'" (click)="bool_array[33]=!bool_array[33]" role="button"></div>
+    <div [ngClass]="bool_array[34] ? 'red':'board'" (click)="bool_array[34]=!bool_array[34]" role="button"></div>
+    <div [ngClass]="bool_array[35] ? 'red':'board'" (click)="bool_array[35]=!bool_array[35]" role="button"></div>
+    <div [ngClass]="bool_array[36] ? 'red':'board'" (click)="bool_array[36]=!bool_array[36]" role="button"></div>
+    <div [ngClass]="bool_array[37] ? 'red':'board'" (click)="bool_array[37]=!bool_array[37]" role="button"></div>
+    <div [ngClass]="bool_array[38] ? 'red':'board'" (click)="bool_array[38]=!bool_array[38]" role="button"></div>
+    <div [ngClass]="bool_array[39] ? 'red':'board'" (click)="bool_array[39]=!bool_array[39]" role="button"></div>
 
     <div class="board">E</div>
-    <div class="board">e1</div>
-    <div class="board">e2</div>
-    <div class="board">e3</div>
-    <div class="board">e4</div>
-    <div class="board">e5</div>
-    <div class="board">e6</div>
-    <div class="board">e7</div>
-    <div class="board">e8</div>
-    <div class="board">e9</div>
-    <div class="board">e10</div>
+    <div [ngClass]="bool_array[40] ? 'red':'board'" (click)="bool_array[40]=!bool_array[40]" role="button"></div>
+    <div [ngClass]="bool_array[41] ? 'red':'board'" (click)="bool_array[41]=!bool_array[41]" role="button"></div>
+    <div [ngClass]="bool_array[42] ? 'red':'board'" (click)="bool_array[42]=!bool_array[42]" role="button"></div>
+    <div [ngClass]="bool_array[43] ? 'red':'board'" (click)="bool_array[43]=!bool_array[43]" role="button"></div>
+    <div [ngClass]="bool_array[44] ? 'red':'board'" (click)="bool_array[44]=!bool_array[44]" role="button"></div>
+    <div [ngClass]="bool_array[45] ? 'red':'board'" (click)="bool_array[45]=!bool_array[45]" role="button"></div>
+    <div [ngClass]="bool_array[46] ? 'red':'board'" (click)="bool_array[46]=!bool_array[46]" role="button"></div>
+    <div [ngClass]="bool_array[47] ? 'red':'board'" (click)="bool_array[47]=!bool_array[47]" role="button"></div>
+    <div [ngClass]="bool_array[48] ? 'red':'board'" (click)="bool_array[48]=!bool_array[48]" role="button"></div>
+    <div [ngClass]="bool_array[49] ? 'red':'board'" (click)="bool_array[49]=!bool_array[49]" role="button"></div>
 
     <div class="board">F</div>
-    <div class="board">f1</div>
-    <div class="board">f2</div>
-    <div class="board">f3</div>
-    <div class="board">f4</div>
-    <div class="board">f5</div>
-    <div class="board">f6</div>
-    <div class="board">f7</div>
-    <div class="board">f8</div>
-    <div class="board">f9</div>
-    <div class="board">f10</div>
+    <div [ngClass]="bool_array[50] ? 'red':'board'" (click)="bool_array[50]=!bool_array[50]" role="button"></div>
+    <div [ngClass]="bool_array[51] ? 'red':'board'" (click)="bool_array[51]=!bool_array[51]" role="button"></div>
+    <div [ngClass]="bool_array[52] ? 'red':'board'" (click)="bool_array[52]=!bool_array[52]" role="button"></div>
+    <div [ngClass]="bool_array[53] ? 'red':'board'" (click)="bool_array[53]=!bool_array[53]" role="button"></div>
+    <div [ngClass]="bool_array[54] ? 'red':'board'" (click)="bool_array[54]=!bool_array[54]" role="button"></div>
+    <div [ngClass]="bool_array[55] ? 'red':'board'" (click)="bool_array[55]=!bool_array[55]" role="button"></div>
+    <div [ngClass]="bool_array[56] ? 'red':'board'" (click)="bool_array[56]=!bool_array[56]" role="button"></div>
+    <div [ngClass]="bool_array[57] ? 'red':'board'" (click)="bool_array[57]=!bool_array[57]" role="button"></div>
+    <div [ngClass]="bool_array[58] ? 'red':'board'" (click)="bool_array[58]=!bool_array[58]" role="button"></div>
+    <div [ngClass]="bool_array[59] ? 'red':'board'" (click)="bool_array[59]=!bool_array[59]" role="button"></div>
 
     <div class="board">G</div>
-    <div class="board">g1</div>
-    <div class="board">g2</div>
-    <div class="board">g3</div>
-    <div class="board">g4</div>
-    <div class="board">g5</div>
-    <div class="board">g6</div>
-    <div class="board">g7</div>
-    <div class="board">g8</div>
-    <div class="board">g9</div>
-    <div class="board">g10</div>
+    <div [ngClass]="bool_array[60] ? 'red':'board'" (click)="bool_array[60]=!bool_array[60]" role="button"></div>
+    <div [ngClass]="bool_array[61] ? 'red':'board'" (click)="bool_array[61]=!bool_array[61]" role="button"></div>
+    <div [ngClass]="bool_array[62] ? 'red':'board'" (click)="bool_array[62]=!bool_array[62]" role="button"></div>
+    <div [ngClass]="bool_array[63] ? 'red':'board'" (click)="bool_array[63]=!bool_array[63]" role="button"></div>
+    <div [ngClass]="bool_array[64] ? 'red':'board'" (click)="bool_array[64]=!bool_array[64]" role="button"></div>
+    <div [ngClass]="bool_array[65] ? 'red':'board'" (click)="bool_array[65]=!bool_array[65]" role="button"></div>
+    <div [ngClass]="bool_array[66] ? 'red':'board'" (click)="bool_array[66]=!bool_array[66]" role="button"></div>
+    <div [ngClass]="bool_array[67] ? 'red':'board'" (click)="bool_array[67]=!bool_array[67]" role="button"></div>
+    <div [ngClass]="bool_array[68] ? 'red':'board'" (click)="bool_array[68]=!bool_array[68]" role="button"></div>
+    <div [ngClass]="bool_array[69] ? 'red':'board'" (click)="bool_array[69]=!bool_array[69]" role="button"></div>
 
     <div class="board">H</div>
-    <div class="board">h1</div>
-    <div class="board">h2</div>
-    <div class="board">h3</div>
-    <div class="board">h4</div>
-    <div class="board">h5</div>
-    <div class="board">h6</div>
-    <div class="board">h7</div>
-    <div class="board">h8</div>
-    <div class="board">h9</div>
-    <div class="board">h10</div>
+    <div [ngClass]="bool_array[70] ? 'red':'board'" (click)="bool_array[70]=!bool_array[70]" role="button"></div>
+    <div [ngClass]="bool_array[71] ? 'red':'board'" (click)="bool_array[71]=!bool_array[71]" role="button"></div>
+    <div [ngClass]="bool_array[72] ? 'red':'board'" (click)="bool_array[72]=!bool_array[72]" role="button"></div>
+    <div [ngClass]="bool_array[73] ? 'red':'board'" (click)="bool_array[73]=!bool_array[73]" role="button"></div>
+    <div [ngClass]="bool_array[74] ? 'red':'board'" (click)="bool_array[74]=!bool_array[74]" role="button"></div>
+    <div [ngClass]="bool_array[75] ? 'red':'board'" (click)="bool_array[75]=!bool_array[75]" role="button"></div>
+    <div [ngClass]="bool_array[76] ? 'red':'board'" (click)="bool_array[76]=!bool_array[76]" role="button"></div>
+    <div [ngClass]="bool_array[77] ? 'red':'board'" (click)="bool_array[77]=!bool_array[77]" role="button"></div>
+    <div [ngClass]="bool_array[78] ? 'red':'board'" (click)="bool_array[78]=!bool_array[78]" role="button"></div>
+    <div [ngClass]="bool_array[79] ? 'red':'board'" (click)="bool_array[79]=!bool_array[79]" role="button"></div>
 
     <div class="board">I</div>
-    <div class="board">i1</div>
-    <div class="board">i2</div>
-    <div class="board">i3</div>
-    <div class="board">i4</div>
-    <div class="board">i5</div>
-    <div class="board">i6</div>
-    <div class="board">i7</div>
-    <div class="board">i8</div>
-    <div class="board">i9</div>
-    <div class="board">i10</div>
+    <div [ngClass]="bool_array[80] ? 'red':'board'" (click)="bool_array[80]=!bool_array[80]" role="button"></div>
+    <div [ngClass]="bool_array[81] ? 'red':'board'" (click)="bool_array[81]=!bool_array[81]" role="button"></div>
+    <div [ngClass]="bool_array[82] ? 'red':'board'" (click)="bool_array[82]=!bool_array[82]" role="button"></div>
+    <div [ngClass]="bool_array[83] ? 'red':'board'" (click)="bool_array[83]=!bool_array[83]" role="button"></div>
+    <div [ngClass]="bool_array[84] ? 'red':'board'" (click)="bool_array[84]=!bool_array[84]" role="button"></div>
+    <div [ngClass]="bool_array[85] ? 'red':'board'" (click)="bool_array[85]=!bool_array[85]" role="button"></div>
+    <div [ngClass]="bool_array[86] ? 'red':'board'" (click)="bool_array[86]=!bool_array[86]" role="button"></div>
+    <div [ngClass]="bool_array[87] ? 'red':'board'" (click)="bool_array[87]=!bool_array[87]" role="button"></div>
+    <div [ngClass]="bool_array[88] ? 'red':'board'" (click)="bool_array[88]=!bool_array[88]" role="button"></div>
+    <div [ngClass]="bool_array[89] ? 'red':'board'" (click)="bool_array[89]=!bool_array[89]" role="button"></div>
 
     <div class="board">J</div>
-    <div class="board">j1</div>
-    <div class="board">j2</div>
-    <div class="board">j3</div>
-    <div class="board">j4</div>
-    <div class="board">j5</div>
-    <div class="board">j6</div>
-    <div class="board">j7</div>
-    <div class="board">j8</div>
-    <div class="board">j9</div>
-    <div class="board">j10</div>
+    <div [ngClass]="bool_array[90] ? 'red':'board'" (click)="bool_array[90]=!bool_array[90]" role="button"></div>
+    <div [ngClass]="bool_array[91] ? 'red':'board'" (click)="bool_array[91]=!bool_array[91]" role="button"></div>
+    <div [ngClass]="bool_array[92] ? 'red':'board'" (click)="bool_array[92]=!bool_array[92]" role="button"></div>
+    <div [ngClass]="bool_array[93] ? 'red':'board'" (click)="bool_array[93]=!bool_array[93]" role="button"></div>
+    <div [ngClass]="bool_array[94] ? 'red':'board'" (click)="bool_array[94]=!bool_array[94]" role="button"></div>
+    <div [ngClass]="bool_array[95] ? 'red':'board'" (click)="bool_array[95]=!bool_array[95]" role="button"></div>
+    <div [ngClass]="bool_array[96] ? 'red':'board'" (click)="bool_array[96]=!bool_array[96]" role="button"></div>
+    <div [ngClass]="bool_array[97] ? 'red':'board'" (click)="bool_array[97]=!bool_array[97]" role="button"></div>
+    <div [ngClass]="bool_array[98] ? 'red':'board'" (click)="bool_array[98]=!bool_array[98]" role="button"></div>
+    <div [ngClass]="bool_array[99] ? 'red':'board'" (click)="bool_array[99]=!bool_array[99]" role="button"></div>
 </div>
 </div>
