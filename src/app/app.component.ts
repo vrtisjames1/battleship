@@ -19,7 +19,7 @@ export class AppComponent {
   // // PUT REQUEST
   currentGame: any={}={};
   // // SHOW/HIDE CREATE GAME
-  showCreate: boolean=false;
+  showCreate: boolean=true;
   // // SHOW/HIDE SELECT GAME
   showSelect: boolean=false;
   // show/hide Create game state
@@ -42,28 +42,32 @@ export class AppComponent {
     this.showP1 = false;
     this.showP2 = false;
     this.showPlayers = false;
+    this.showSetup = false;
     this.showMessageSetup = false;
   }
 
   // change states os Select Game
   toggleSelect(){
     this.showSelect = !this.showSelect;
-    this.loadGames();
     this.showCreate = false;
     this.showP1 = false;
     this.showP2 = false;
     this.showPlayers = false;
     this.showMessageSetup = false;
+    this.showSetup = false;
   }
 
+  // receive response if setupgame board or not
   receiveResponse(response: any){
     this.showMessageSetup = false;
+    // if user already setup board then show playerboard
     if(response == 2){
-      if(this.userSelect === 1){
+      if(this.userSelect == 1){
         this.showP1 = true;
-      } else if (this.userSelect === 2){
+      } else if (this.userSelect == 2){
         this.showP2 = true;
       }
+      // if user did not setupboard then show player1 setup ( player1 setup is miss named and used by both players)
     } else if (response == 1){
       this.showSetup = true;
     }
@@ -74,19 +78,22 @@ export class AppComponent {
     this.userSelect = user;
     this.showPlayers = false;
     this.showMessageSetup = true;
-    // if(this.userSelect === 1){
-    //   this.showP1 = true
-    // } else if (this.userSelect === 2){
-    //   this.showP2 = true
-    // }
   }
 
-  // get reqquest
-   loadGames(){
+  //  onInit/useEffect
+  ngOnInit(){
     this.http.get("https://battleapi.herokuapp.com/api/games").subscribe((games: any)=>{
       this.games = games;
       console.log(this.games);
     })
+  }
+  // get reqquest
+   loadGames(){
+    console.log("works")
+    this.http.get("https://battleapi.herokuapp.com/api/games").subscribe((games: any)=>{
+      this.games = games;
+      this.currentGame = this.games.find((a) => {return a.id === this.currentGame.id})
+    });
    }
 
   //  post request
@@ -106,24 +113,14 @@ export class AppComponent {
    });
   }
 
-  // put Request
-  // editClicked(id: number){
-  //   this.currentGame = this.games.find((a) => {return a.id === id})
-  //   console.log(this.currentGame)
-  // }
+
   selectGame(game: any){
     this.currentGame = game;
     this.showPlayers = true;
     this.showSelect = false;
-
   }
 
-  // submitEdit(game: {game_name: string, username1: string, username2: string}){
-  //   this.currentGame = {...this.currentGame,
-  //     game_name: game.game_name,
-  //     username1: game.username1,
-  //     username2: game.username2,
-  //   }
+  // PUT Request/ set the current game from selected
   setCurrentGame(newCurrentGame: any){
     this.currentGame = newCurrentGame
     this.showSetup = false;

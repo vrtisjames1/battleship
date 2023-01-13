@@ -13,11 +13,11 @@ export class PlayerselectComponent {
 
 
   clickEvent1(){
-    this.selectedUser.emit(2)
+    this.selectedUser.emit(1)
   }
 
   clickEvent2(){
-    this.selectedUser.emit(1)
+    this.selectedUser.emit(2)
   }
 
 }

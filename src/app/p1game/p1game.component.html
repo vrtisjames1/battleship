@@ -2,7 +2,7 @@
     <div class="messageContainer">
         <div>
             
-            <h2>{{message}}</h2>
+            <h2 [ngClass]="currentGame.user1_turn === true ? 'greentext' : 'redtext'">{{message}}</h2>
             <div>
                 <h3>Legend</h3>
                 <div class="legend">
@@ -12,7 +12,7 @@
                     <p>MISS: </p><div class="miss"></div>
                 </div>
                 <p>{{rules}}</p>
-                <button type="button" class="btn btn-success" (click)="submitNew()">Refresh</button>
+                <button type="button" class="btn btn-success" (click)="refresh()">Refresh</button>
             </div>
         </div>
     </div>

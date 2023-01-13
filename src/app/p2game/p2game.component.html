@@ -1,17 +1,17 @@
 <div class="gameContainer">
     <div class="messageContainer">
         <div>
-            <h2>{{message}}</h2>
+            <h2 [ngClass]="currentGame.user2_turn === true  ? 'greentext' : 'redtext'">{{message}}</h2>
             <div>
                 <h3>Legend</h3>
                 <div class="legend">
                     <p>Your Board: </p><div class="p2"></div>
-                    <p>{{currentGame.username2}} Board: </p><div class="p1"></div>
+                    <p>{{currentGame.username1}} Board: </p><div class="p1"></div>
                     <p>HIT: </p><div class="hit"></div>
                     <p>MISS: </p><div class="miss"></div>
                 </div>
                     <p>{{rules}}</p>
-                    <button type="button" class="btn btn-success" (click)="submitNew()">Submit</button>
+                    <button type="button" class="btn btn-success" (click)="refresh()">Refresh</button>
             </div>
         </div>
     </div>

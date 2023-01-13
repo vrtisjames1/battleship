@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-p1game',
@@ -11,8 +11,16 @@ export class P1gameComponent {
   // output updated game
   @Output() updateGame: EventEmitter<any> = new EventEmitter();
   @Output() refreshGame: EventEmitter<any> = new EventEmitter();
-  rules: string='Select space on opponent board to fire a missle. Once fired, wait for opponent to make their turn. After each turn refresh the page with the button below'
-  message: string= (this.currentGame.user1_turn = true? 'Your Turn' : 'Opponent Turn')
+  rules: string='(Rules: Select space on opponent board to fire a missle. Once fired, wait for opponent to make their turn. After each turn refresh the page with the button below.)'
+  message: string= ''
+
+  ngOnInit(){
+    this.message = this.currentGame.user1_turn === true ? 'Your Turn' : 'Opponent Turn'
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.message = this.currentGame.user1_turn === true ? 'Your Turn' : 'Opponent Turn'
+  }
 
   submit(data: any){
 
@@ -25,7 +33,8 @@ export class P1gameComponent {
     this.message = 'Opponent Turn';
   }
 
-  submitNew(){
+  refresh(){
     this.refreshGame.emit();
+    this.message = this.currentGame.user1_turn === true ? 'Your Turn' : 'Opponent Turn'
   }
 }
