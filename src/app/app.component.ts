@@ -84,15 +84,13 @@ export class AppComponent {
   ngOnInit(){
     this.http.get("https://battleapi.herokuapp.com/api/games").subscribe((games: any)=>{
       this.games = games;
-      console.log(this.games);
     })
   }
   // get reqquest
    loadGames(){
-    console.log("works")
     this.http.get("https://battleapi.herokuapp.com/api/games").subscribe((games: any)=>{
       this.games = games;
-      this.currentGame = this.games.find((a) => {return a.id === this.currentGame.id})
+      this.currentGame = this.games.find((a) => {return a.id === this.currentGame.id});
     });
    }
 
