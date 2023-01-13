@@ -29,6 +29,7 @@ import { Player1Component } from './player1/player1.component';
 import { P1gameComponent } from './p1game/p1game.component';
 import { PlayerselectComponent } from './playerselect/playerselect.component';
 import { P2gameComponent } from './p2game/p2game.component';
+import { SetupComponent } from './setup/setup.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { P2gameComponent } from './p2game/p2game.component';
     P1gameComponent,
     PlayerselectComponent,
     P2gameComponent,
+    SetupComponent,
     // TestComponent
   ],
   imports: [

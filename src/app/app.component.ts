@@ -26,11 +26,23 @@ export class AppComponent {
   userSelect: number;
   // show/hide players
   showPlayers: boolean=false;
+  // show/hide player1
+   showP1: boolean=false;
+  // show/hide player2
+  showP2: boolean=false;
+  //show/hide setup
+  showSetup: boolean=false;
+  //show/hide setupmessage
+  showMessageSetup: boolean=false;
 
   // change state of create game
   toggleCreate(){
     this.showCreate = !this.showCreate;
     this.showSelect = false;
+    this.showP1 = false;
+    this.showP2 = false;
+    this.showPlayers = false;
+    this.showMessageSetup = false;
   }
 
   // change states os Select Game
@@ -38,12 +50,35 @@ export class AppComponent {
     this.showSelect = !this.showSelect;
     this.loadGames();
     this.showCreate = false;
+    this.showP1 = false;
+    this.showP2 = false;
+    this.showPlayers = false;
+    this.showMessageSetup = false;
+  }
+
+  receiveResponse(response: any){
+    this.showMessageSetup = false;
+    if(response == 2){
+      if(this.userSelect === 1){
+        this.showP1 = true;
+      } else if (this.userSelect === 2){
+        this.showP2 = true;
+      }
+    } else if (response == 1){
+      this.showSetup = true;
+    }
   }
 
   // selectUser
   selectedUser(user: number){
     this.userSelect = user;
     this.showPlayers = false;
+    this.showMessageSetup = true;
+    // if(this.userSelect === 1){
+    //   this.showP1 = true
+    // } else if (this.userSelect === 2){
+    //   this.showP2 = true
+    // }
   }
 
   // get reqquest
@@ -91,7 +126,12 @@ export class AppComponent {
   //   }
   setCurrentGame(newCurrentGame: any){
     this.currentGame = newCurrentGame
-    console.log(this.currentGame)
+    this.showSetup = false;
+    if(this.userSelect === 1){
+      this.showP1 = true;
+    } else if (this.userSelect === 2){
+      this.showP2 = true;
+    }
 
       this.http.put("https://battleapi.herokuapp.com/api/games/" + this.currentGame.id, this.currentGame).subscribe({
         next: this.loadGames.bind(this)

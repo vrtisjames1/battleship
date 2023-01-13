@@ -10,15 +10,23 @@ export class P2gameComponent {
   @Input() currentGame: any={};
   // output updated game
   @Output() updateGame: EventEmitter<any> = new EventEmitter();
+   // output updated game
+   @Output() refreshGame: EventEmitter<any> = new EventEmitter();
 
-  message: string='Start Game! Select space on "Opponent Board" to launch your first missle!'
+  message: string='Oppnent turn'
 
   submit(data: any){
-    this.currentGame.user1_turn = true;
-    this.currentGame.user2_turn = false;
+
   }
 
   submit2(data: any){
+    this.currentGame.user1_turn = true;
+    this.currentGame.user2_turn = false;
     this.updateGame.emit(this.currentGame);
+    this.message = 'Opponent Turn'
+  }
+
+  submitNew(){
+    this.refreshGame.emit();
   }
 }

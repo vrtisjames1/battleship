@@ -6,9 +6,10 @@
   <!-- select game -->
   <app-select [games]="games" (deleteEvent)="deleteGame($event)" (selectedGame)="selectGame($event)" *ngIf="showSelect"></app-select>
   <app-playerselect [currentGame]="currentGame" (selectedUser)="selectedUser($event)" *ngIf="showPlayers"></app-playerselect>
-  <app-player1 [currentGame]="currentGame" [userSelect]="userSelect" (newCurrentGame)="setCurrentGame($event)"></app-player1>
+  <app-setup (sendResponse)="receiveResponse($event)" *ngIf="showMessageSetup"></app-setup>
+  <app-player1 [currentGame]="currentGame" [userSelect]="userSelect" (newCurrentGame)="setCurrentGame($event)" *ngIf="showSetup"></app-player1>
   <!-- p1 playing game -->
-  <app-p1game [currentGame]="currentGame" (updateGame)="setCurrentGame($event)"></app-p1game>
+  <app-p1game [currentGame]="currentGame" (updateGame)="setCurrentGame($event)" (refreshGame)="loadGames" *ngIf="showP1"></app-p1game>
   <!-- p2 playing game -->
-  <app-p2game [currentGame]="currentGame" (updateGame)="setCurrentGame($event)"></app-p2game>
+  <app-p2game [currentGame]="currentGame" (updateGame)="setCurrentGame($event)" (refreshGame)="loadGames" *ngIf="showP2"></app-p2game>
 </div>

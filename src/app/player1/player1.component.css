@@ -33,7 +33,7 @@
     justify-content: center;
     margin: 1em auto 3em auto;
     grid-template-columns: repeat(11, 8%);
-    grid-template-rows: repeat(11, 8vh);
+    grid-template-rows: repeat(11, 7vh);
 }
 
 .board{

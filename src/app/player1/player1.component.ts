@@ -52,9 +52,9 @@ export class Player1Component {
               [this.var_name]: 1
             }}}
       }
-      
       }
       // emit message
       this.newCurrentGame.emit(this.currentGame)
     }
+
   }

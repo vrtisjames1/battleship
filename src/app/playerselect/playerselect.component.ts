@@ -11,12 +11,14 @@ export class PlayerselectComponent {
   // export currentgame data
   @Output() selectedUser = new EventEmitter<any>();
 
-  // select username 1
-  select1(){
-    this.selectedUser.emit(1)
-  }
-// select username 2
-  select2(){
+
+  clickEvent1(){
     this.selectedUser.emit(2)
   }
+
+  clickEvent2(){
+    this.selectedUser.emit(1)
+  }
+
 }
+

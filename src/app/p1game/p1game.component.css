@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color:  #002147
+    background-color:  #002147;
 }
 .oppboard{
     border: 1px solid black;
@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color:  #5D76A9
+    background-color:  #5D76A9;
 }
 
 
@@ -73,4 +73,43 @@
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+/* legend */
+.legend{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.p1{
+    height: 20px;
+    width: 20px;
+    background-color: #002147;
+    border: 1px solid black;
+}
+
+.p2{
+    height: 20px;
+    width: 20px;
+    background-color: #5D76A9;
+    border: 1px solid black;
+}
+
+.hit{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.miss{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid black;
 }
