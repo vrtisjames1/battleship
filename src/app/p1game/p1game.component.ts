@@ -11,8 +11,8 @@ export class P1gameComponent {
   // output updated game
   @Output() updateGame: EventEmitter<any> = new EventEmitter();
   @Output() refreshGame: EventEmitter<any> = new EventEmitter();
-
-  message: string='Start Game! Select space on "Opponent Board" to launch your first missle!'
+  rules: string='Select space on opponent board to fire a missle. Once fired, wait for opponent to make their turn. After each turn refresh the page with the button below'
+  message: string= (this.currentGame.user1_turn = true? 'Your Turn' : 'Opponent Turn')
 
   submit(data: any){
 
