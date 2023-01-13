@@ -12,7 +12,7 @@ export class P2gameComponent {
   @Output() updateGame: EventEmitter<any> = new EventEmitter();
    // output updated game
    @Output() refreshGame: EventEmitter<any> = new EventEmitter();
-  rules: string='(Rules: Select space on opponent board to fire a missle. Once fired, wait for opponent to make their turn. After each turn refresh the page with the button below.)'
+  rules: string='(Rules: Select space on opponent board to fire a missle. Once fired, wait for opponent to make their turn. After each opponent turn, refresh the page with the button below.)'
   message: string=''
 
   ngOnInit(){
