@@ -1,7 +1,7 @@
 <div class="gameContainer">
     <div class="messageContainer">
         <div>
-            <h2 [ngClass]="currentGame.user2_turn === true  ? 'greentext' : 'redtext'">{{message}}</h2>
+            <p>{{rules}}</p>
             <div>
                 <h3>Legend</h3>
                 <div class="legend">
@@ -10,7 +10,7 @@
                     <p>HIT: </p><div class="hit"></div>
                     <p>MISS: </p><div class="miss"></div>
                 </div>
-                    <p>{{rules}}</p>
+                    <h2 [ngClass]="currentGame.user2_turn === true  ? 'greentext' : 'redtext'">{{message}}</h2>
                     <button type="button" class="btn btn-success" (click)="refresh()">Refresh</button>
             </div>
         </div>
@@ -127,7 +127,7 @@
 
     <div class="oppboard">I</div>
     <div [ngClass]="currentGame.stat_i1_2 === false ? 'oppboard': (currentGame.i1 === 3 ? 'white' : 'red')" (click)="currentGame.user2_turn === true ? submit((currentGame.i1 === 1 ? currentGame.i1 = 4: currentGame.i1 = 3)): null; " (click)="currentGame.user2_turn === true ? submit2(currentGame.stat_i1_2 = true) : null"></div>
-    <div [ngClass]="currentGame.stat_i2_2 === false ? 'oppboard': (currentGame.i2_=== 3 ? 'white' : 'red')" (click)="currentGame.user2_turn === true ? submit((currentGame.i2 === 1 ? currentGame.i2 = 4: currentGame.i2 = 3)): null; " (click)="currentGame.user2_turn === true ? submit2(currentGame.stat_i2_2 = true) : null"></div>
+    <div [ngClass]="currentGame.stat_i2_2 === false ? 'oppboard': (currentGame.i2 === 3 ? 'white' : 'red')" (click)="currentGame.user2_turn === true ? submit((currentGame.i2 === 1 ? currentGame.i2 = 4: currentGame.i2 = 3)): null; " (click)="currentGame.user2_turn === true ? submit2(currentGame.stat_i2_2 = true) : null"></div>
     <div [ngClass]="currentGame.stat_i3_2 === false ? 'oppboard': (currentGame.i3 === 3 ? 'white' : 'red')" (click)="currentGame.user2_turn === true ? submit((currentGame.i3 === 1 ? currentGame.i3 = 4: currentGame.i3 = 3)): null; " (click)="currentGame.user2_turn === true ? submit2(currentGame.stat_i3_2 = true) : null"></div>
     <div [ngClass]="currentGame.stat_i4_2 === false ? 'oppboard': (currentGame.i4 === 3 ? 'white' : 'red')" (click)="currentGame.user2_turn === true ? submit((currentGame.i4 === 1 ? currentGame.i4 = 4: currentGame.i4 = 3)): null; " (click)="currentGame.user2_turn === true ? submit2(currentGame.stat_i4_2 = true) : null"></div>
     <div [ngClass]="currentGame.stat_i5_2 === false ? 'oppboard': (currentGame.i5 === 3 ? 'white' : 'red')" (click)="currentGame.user2_turn === true ? submit((currentGame.i5 === 1 ? currentGame.i5 = 4: currentGame.i5 = 3)): null; " (click)="currentGame.user2_turn === true ? submit2(currentGame.stat_i5_2 = true) : null"></div>
