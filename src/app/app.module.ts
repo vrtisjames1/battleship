@@ -24,6 +24,12 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectComponent } from './select/select.component';
+import { Player1Component } from './player1/player1.component';
+import { P1gameComponent } from './p1game/p1game.component';
+import { PlayerselectComponent } from './playerselect/playerselect.component';
+import { P2gameComponent } from './p2game/p2game.component';
+import { SetupComponent } from './setup/setup.component';
 
 
 @NgModule({
@@ -31,6 +37,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HeaderComponent,
     CreateComponent,
+    SelectComponent,
+    Player1Component,
+    P1gameComponent,
+    PlayerselectComponent,
+    P2gameComponent,
+    SetupComponent,
     // TestComponent
   ],
   imports: [
