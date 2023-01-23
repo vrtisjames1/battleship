@@ -44,17 +44,18 @@ export class Player1Component {
             this.currentGame = {...this.currentGame,
               [this.var_name]: 1
             }}}
+            this.newCurrentGame.emit(this.currentGame)
       } else if (this.userSelect === 2){
         for(let i = 0; i < 100 ; i++){
           if(this.bool_array[i] === true){
             this.var_name = this.var2_array[i]
             this.currentGame = {...this.currentGame,
               [this.var_name]: 1
-            }}}
+            }}
+          }
+          this.newCurrentGame.emit(this.currentGame)
       }
       }
-      // emit message
-      this.newCurrentGame.emit(this.currentGame)
     }
 
   }
