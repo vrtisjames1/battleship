@@ -22,6 +22,7 @@
     "useDefineForClassFields": false,
     "types": [
       "@angular/localize"
+      ,"jasmine"
     ],
     "lib": [
       "ES2022",
