@@ -1,7 +1,5 @@
 http://localhost:4200
 
+front: https://battleships123.netlify.app/#
 
-live link: https://battleships123.netlify.app/#
-
-api: https://battleapi.herokuapp.com/api/games
-
+back: https://battleapi.herokuapp.com/api/games
